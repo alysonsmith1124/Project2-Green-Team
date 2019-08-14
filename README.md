@@ -5,7 +5,7 @@ We'll be web scrapping Spotify for the top 100 track names and then pull specifi
 
 With the cleaned data, we'll create visualizations that will help us compare and determine what qualities the top tracks have in common.
 
-We'll be splitting up tasks in smaller teams:
+We'll be splitting up tasks into smaller teams:
   Web-Scrapping: Gabe
   API Requests: Aly, Sasi
   Basic Site Structure: Bill
