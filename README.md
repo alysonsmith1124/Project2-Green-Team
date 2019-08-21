@@ -1,5 +1,5 @@
 # Project 2: Green Team
-## Authors: Aly Smith, Gaberiel Hernandez, Pramit Ghosh, Sasikanth Vutukuru, Bill Ulrich
+## Authors: Aly Smith, Gabriel Hernandez, Pramit Ghosh, Sasikanth Vutukuru, Bill Ulrich
 Our team is going to be exploring Spotify to find if there are any similarities between the music components of the top 100 tracks on Spotify. 
 
 We'll be web scrapping Spotify for the top 100 track names and then pull specific data for each track via the Spotify API.
