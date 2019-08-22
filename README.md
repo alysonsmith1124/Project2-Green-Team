@@ -11,3 +11,4 @@ We'll be splitting up tasks into smaller teams:
   API Requests: Aly, Sasi
   Basic Site Structure: Bill
   Visualizations: Pramit, Sasi 
+
