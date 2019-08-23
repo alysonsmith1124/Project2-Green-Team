@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+  <title>Flask Plotlyjs Example</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+</head>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Spotify Song Feature Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>SELECT Song from Top 100:</h5>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Song</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="pie"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div id="bubble"></div>
+    </div>
+  </div>
+
+  
+<body>
+<div class="container">
+    <canvas id="myChart"></canvas>
+</div>
+    <script>
+            let myChart = document.getElementById('myChart').getContext('2d');
+            // Global Options
+            Chart.defaults.global.defaultFontFamily = 'Lato';
+            Chart.defaults.global.defaultFontsize = 18;
+            Chart.defaults.global.defaultFontColor = '#777';
+            let PrPopChart = new Chart(myChart, {
+            type:'radar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+            data:{
+                labels:['Danceability', 'Energy', 'Speechiness', 'Acousticness', 'Liveness	', 'Valence'],
+                datasets:[{
+                label:'Population',
+                data:[
+                    0.5,
+                    0.1,
+                    0.2,
+                    0.3,
+                    0.2,
+                    0.9,
+                
+                ],
+                // backgroundColor: 'green',
+                backgroundColor:[
+                    'Red',
+                    
+                ],
+                borderWidth:1,
+                borderColor:'Black',
+                hoverBorderWidth: 3,
+                hoverBorderColor: 'Black'
+                }]
+            },
+            options:{
+                title:{
+                display: true,
+                text: 'Radar Chart',
+                fontSize:25
+                },
+                legend:{
+                display:true,
+                position:'right',
+                labels:{
+                    fontColor: '#000'
+                }
+                },
+                layout:{
+                padding:{
+                    left:50,
+                    right:0,
+                    bottom:-1050,
+                    top:0
+                }
+                },
+                tooltips:{
+                enabled:true
+                }
+            }
+            });
+        
+        </script>
+        
+
+  <!-- <script src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  <script src="static/js/logic.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+</body>
+
+<body>
+
+</body>
+
+</html>
