@@ -1,0 +1,5 @@
+Requirements to run application:
+
+install node.js and bower onto local drive.
+
+Also to note: logic.js file should be moved inside folders static/js, because GitHub would not upload the folders. Otherwise, check file location in index.html before running code.
